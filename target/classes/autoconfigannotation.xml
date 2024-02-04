@@ -7,8 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:annotation-config />
     <!-- Our beans   -->
-    <bean class="com.springcore.auto.wire.Address" name="address">
+    <bean class="com.springcore.auto.wire.annotation.Address" name="address">
         <property name="street">
             <value>Sultanpur Sarani</value>
         </property>
@@ -17,9 +18,7 @@
         </property>
     </bean>
 
-    <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="byName" />
-    <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="byType" />
-    <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="constructor" />
+    <bean class="com.springcore.auto.wire.annotation.Emp" name="emp1" />
 
 
 </beans>
